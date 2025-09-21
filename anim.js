@@ -1,36 +1,30 @@
-// Sincronizar las letras con la canción
+// Sincronizar las letras con la canción 
 var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "At the time", time: 15 },
-  { text: "The whisper of birds", time: 18 },
-  { text: "Lonely before the sun cried", time: 27 },
-  { text: "Fell from the sky", time: 32 },
-  { text: "Like water drops", time: 33 },
-  { text: "Where I'm now? I don't know why", time: 41 },
-  { text: "Nice butterflies in my hands", time: 47 },
-  { text: "Too much light for twilight", time: 54 },
-  { text: "In the mood for the flowers love", time: 59 },
-  { text: "That vision", time: 67 },
-  { text: "Really strong, blew my mind", time: 72 },
-  { text: "Silence Let me see what it was", time: 78 },
-  { text: "I only want to live in clouds", time: 83 },
-  { text: "Where I'm now? I don't know why", time: 91 },
-  { text: "Nice butterflies in my hands", time: 97 },
-  { text: "Too much light for twilight", time: 104 },
-  { text: "In the mood for the flowers love", time: 108 },
-  { text: "At the time", time: 144 },
-  { text: "The whisper of birds", time: 148 },
-  { text: "Lonely before the sun cried", time: 153 },
-  { text: "Fell from the sky", time: 158 },
-  { text: "Like water drops", time: 164 },
-  { text: "Where I'm now? I don't know why", time: 169 },
-  { text: "Nice butterflies in my hands", time: 176 },
-  { text: "Too much light for twilight", time: 183 },
-  { text: "In the mood for the flowers", time: 188 },
-  { text: "Love.", time: 140 },
+  { text: "I don't wanna be your friend", time: 5 },
+  { text: "I wanna kiss your neck", time: 10 },
+  { text: "I wanna be your pretty girl", time: 14 },
+  { text: "I'm just not in the mood", time: 18 },
+  { text: "I wanna tell you that I love you", time: 22 },
+  { text: "But I'm too afraid to do", time: 26 },
+  { text: "Cause I don't think you feel the same", time: 31 },
+  { text: "But I just wanna be your pretty girl", time: 35 },
+  { text: "And I don't wanna be alone", time: 40 },
+  { text: "I don't wanna be alone", time: 44 },
+  { text: "I don't wanna be your friend", time: 50 },
+  { text: "I wanna kiss your neck", time: 54 },
+  { text: "I wanna be your pretty girl", time: 58 },
+  { text: "I wanna be your pretty girl", time: 65 },
+  { text: "And I don't wanna be alone", time: 70 },
+  { text: "I don't wanna be alone", time: 74 },
+  { text: "I just want to be your pretty girl", time: 78 },
+  { text: "But I'm too afraid to say", time: 82 },
+  { text: "That I love you", time: 86 },
+  { text: "Cause I don't think you feel the same", time: 90 },
+  { text: "But I just wanna be your pretty girl", time: 94 },
 ];
 
 // Animar las letras
@@ -57,8 +51,7 @@ function updateLyrics() {
 
 setInterval(updateLyrics, 1000);
 
-//funcion titulo
-// Función para ocultar el título después de 216 segundos
+// Función para ocultar el título después de un tiempo
 function ocultarTitulo() {
   var titulo = document.querySelector(".titulo");
   titulo.style.animation =
@@ -68,5 +61,5 @@ function ocultarTitulo() {
   }, 3000); // Espera 3 segundos antes de ocultar completamente
 }
 
-// Llama a la función después de 216 segundos (216,000 milisegundos)
+// Llama a la función después de un tiempo determinado (en este caso 216 segundos)
 setTimeout(ocultarTitulo, 216000);
