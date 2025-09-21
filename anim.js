@@ -4,27 +4,43 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "I don't wanna be your friend", time: 5 },
-  { text: "I wanna kiss your neck", time: 10 },
-  { text: "I wanna be your pretty girl", time: 14 },
-  { text: "I'm just not in the mood", time: 18 },
-  { text: "I wanna tell you that I love you", time: 22 },
-  { text: "But I'm too afraid to do", time: 26 },
-  { text: "Cause I don't think you feel the same", time: 31 },
-  { text: "But I just wanna be your pretty girl", time: 35 },
-  { text: "And I don't wanna be alone", time: 40 },
-  { text: "I don't wanna be alone", time: 44 },
-  { text: "I don't wanna be your friend", time: 50 },
-  { text: "I wanna kiss your neck", time: 54 },
-  { text: "I wanna be your pretty girl", time: 58 },
-  { text: "I wanna be your pretty girl", time: 65 },
-  { text: "And I don't wanna be alone", time: 70 },
-  { text: "I don't wanna be alone", time: 74 },
-  { text: "I just want to be your pretty girl", time: 78 },
-  { text: "But I'm too afraid to say", time: 82 },
-  { text: "That I love you", time: 86 },
-  { text: "Cause I don't think you feel the same", time: 90 },
-  { text: "But I just wanna be your pretty girl", time: 94 },
+  { text: "Polaroid of you dancing in my room", time: 10 },
+  { text: "I want to remember", time: 15 },
+  { text: "I think it was about noon", time: 20 },
+
+  { text: "It's getting harder to understand", time: 28 },
+  { text: "to understand how you felt in my hands", time: 34 },
+
+  { text: "And you said you don't want to be my friend", time: 42 },
+  { text: "You told me you would rather die", time: 47 },
+  { text: "than be in my life", time: 52 },
+
+  { text: "I could be a pretty girl", time: 60 },
+  { text: "I'll wear a skirt for you", time: 64 },
+  { text: "I could be a pretty girl", time: 70 },
+  { text: "Shut up when you want me to", time: 74 },
+
+  { text: "I could be a pretty girl", time: 80 },
+  { text: "I'll never make a scene", time: 85 },
+  { text: "I could be a pretty girl", time: 90 },
+  { text: "I'll do what you like", time: 94 },
+
+  { text: "I could be a pretty girl", time: 108 },
+  { text: "I'll lose myself in you", time: 112 },
+  { text: "I was so blinded by you", time: 116 },
+
+  { text: "Now I cry just thinking 'bout the fool", time: 124 },
+  { text: "that I made myself for you", time: 130 },
+
+  { text: "I could be a pretty girl", time: 138 },
+  { text: "I'll wear a skirt for you", time: 142 },
+  { text: "I could be a pretty girl", time: 148 },
+  { text: "Shut up when you want me to", time: 152 },
+
+  { text: "I could be a pretty girl", time: 158 },
+  { text: "I'll never make a scene", time: 162 },
+  { text: "I could be a pretty girl", time: 168 },
+  { text: "I'll do what you like", time: 172 },
 ];
 
 // Animar las letras
@@ -35,31 +51,26 @@ function updateLyrics() {
   );
 
   if (currentLine) {
-    // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.1; // Duración del efecto de aparición en segundos
+    var fadeInDuration = 0.1; 
     var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
-
-    // Aplica el efecto de aparición
     lyrics.style.opacity = opacity;
     lyrics.innerHTML = currentLine.text;
   } else {
-    // Restablece la opacidad y el contenido si no hay una línea actual
     lyrics.style.opacity = 0;
     lyrics.innerHTML = "";
   }
 }
 
-setInterval(updateLyrics, 1000);
+setInterval(updateLyrics, 500);
 
 // Función para ocultar el título después de un tiempo
 function ocultarTitulo() {
   var titulo = document.querySelector(".titulo");
-  titulo.style.animation =
-    "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
+  titulo.style.animation = "fadeOut 3s ease-in-out forwards";
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 3000); // Espera 3 segundos antes de ocultar completamente
+  }, 3000);
 }
 
-// Llama a la función después de un tiempo determinado (en este caso 216 segundos)
-setTimeout(ocultarTitulo, 216000);
+// Llama a la función después de un tiempo determinado (2:58 = 178s)
+setTimeout(ocultarTitulo, 178000);
